@@ -1,0 +1,25 @@
+{
+  "name": "ExampleMessage",
+  "type": "record",
+  "namespace": "com.zhevzhyk.model",
+  "fields": [ {
+    "name" : "uuid",
+    "type" : "string",
+    "logicalType": "uuid",
+    "doc"  : "The unique identifier of the event. The string has to conform with RFC-4122. This field is mandatory and can be used for reference."
+  }, {
+    "name": "format",
+    "type" : {
+ 	  "name": "Format",
+   	  "type": "enum",
+      "symbols":["UNKNOWN", "UNSPECIFIED"],
+      "default": "UNKNOWN"
+	},
+    "doc" : "The format. This field is mandatory."
+  }, {
+       "name" : "sourceApplication",
+       "type" : ["null", "string"],
+       "doc"  : "The identifier of the entity generating the record. This field is optional."
+   }],
+  "doc": "A schema for publishing messages."
+}

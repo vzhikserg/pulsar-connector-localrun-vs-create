@@ -3,7 +3,7 @@
 This project shows inconsistency between `localrun` and `create` commands when running Pulsar source connector publishing AVRO messages.
 When the connector was tested using the `localrun` command, the created topic had a correct schema which was not the case when the connector was started with the `create` command.    
 
-You can reproduce the issue following the 
+You can reproduce the issue following the next steps.
 
 ## Generate nar file
 
